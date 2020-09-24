@@ -6,10 +6,9 @@ services:
         image: mysql
         restart: always
         volumes: 
-            - ./src:/docker-entrypoint-initdb.d:z
+            - ${DB_FOLDER:-./src}:/docker-entrypoint-initdb.d:z
         environment: 
             MYSQL_ROOT_PASSWORD: secret
-            MYSQL_DATABASE: cape_codd
         ports: 
             - 3306:3306
 

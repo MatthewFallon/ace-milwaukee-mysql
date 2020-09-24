@@ -8,6 +8,8 @@
 /*																				*/
 /********************************************************************************/
 
+create database if not exists cape_codd;
+
 USE cape_codd;
 
 CREATE TABLE RETAIL_ORDER (
