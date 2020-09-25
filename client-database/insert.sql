@@ -1,5 +1,9 @@
 use client_database;
 
+
+--  FAMILY Entries
+--  FAMILY_ID
+
 insert into FAMILY values (1);
 insert into FAMILY values (2);
 insert into FAMILY values (3);
@@ -13,7 +17,8 @@ insert into FAMILY values (10);
 
 
 
-
+--  CLIENT Entries
+--  CLIENT_NAME | CLIENT_ADDRESS | PHONE_NUMBER | VISIT_LOCATION | FAMILY_ID 
 
 insert into CLIENT values (
     'Henrique Seo-Hyun', '9487 Glen Eagles St., New Bedford, MA 02740', '2025550187', '9487 Glen Eagles St., New Bedford, MA 02740', 1
@@ -52,6 +57,8 @@ insert into CLIENT values (
 
 
 
+--  CHILD Entries
+--  CHILD_NAME | AGE | CHILD_LOCATION | FAMILY_ID
 
 insert into CHILD values (
     'Griogair Tisha', 8, '968 Sunnyslope Dr., Dover, NH 03820', 1
@@ -90,7 +97,8 @@ insert into CHILD values (
 
 
 
-
+--  PARTICIPANT Entries
+--  PARTICIPANT_NAME | IS_ALLOWED | FAMILY_ID
 
 
 insert into PARTICIPANT values (
