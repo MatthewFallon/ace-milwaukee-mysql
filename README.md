@@ -42,6 +42,25 @@ and docker-compose will clean and delete everything so you can start from the to
 
 ---
 
+You do not have to copy contents into the `src` folder to build the database if you don't want to. You can define the folder to build from in terminal using a terminal environment variable you define at the start of each session. `./src` is the default set the `DB_FOLDER` environment variable to use any folder, local relative path or otherwise, you would like.
+
+On Windows with Powershell the command to set this would be:
+
+```
+$env:DB_FOLDER="./EXAMPLE_FOLDER_NAME"
+```
+Or on Linux bash the command is:
+
+```
+export DB_FOLDER=./EXAMPLE_FOLDER_NAME
+```
+
+After running this command you can continue to use docker-compose as normal in that session and it will instead use the given folder.
+
+---
+
+**This is unnecessary by default now.** It was easier to leave this unset by default for this use case. Use `CREATE TABLE IF NOT EXISTS ____` and `USE ___`statements at the start of your files to set up the databases in each folder instaed.
+
 If you want to change the name of the database being used, go into the docker-compose.yml and change the line:
 
     MYSQL_DATABASE: database_name
@@ -49,6 +68,8 @@ If you want to change the name of the database being used, go into the docker-co
 and replace [database_name] with the name you would like to use.
 
 ---
+
+**This is unnecessary by default now.** This default port is already set and ready to use by default. You only need this section if you want to change the port.
 
 If you would like to use MySQL workbench or another SQL Client with this, open the docker-compose.yml file and add the lines:
 
@@ -61,3 +82,4 @@ Indented underneath the line which says `db:`. Now you can add the connection to
 - If you already have SQL Server installed, you will have to uninstall it or at least disable the default server instance which reserves this port by default.
 
 ---
+
