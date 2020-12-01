@@ -25,6 +25,7 @@ VALUES
         'MWF 10:30-11:30',
         1,
         'John Guerrero',
+        '2233903708',
         '782 West Ave. Kenosha, WI 67921',
         'They should be brought to the side door where the door bell works'
     ),
@@ -38,6 +39,7 @@ VALUES
         'MWF 10:30-11:30',
         0,
         'Josh Kind',
+        '6837920123',
         '9273 Luna Ave. Kenosha, WI 67921',
         ''
     );
@@ -69,13 +71,16 @@ INSERT INTO `CHILD` (
 VALUES
     (
         1,
-        'Gregory Guerrero'
+        'Gregory Guerrero',
+        '2007-05-24'
     ),
     (
         2,
-        'Valerie Mitchel'
+        'Valerie Mitchel',
+        '2017-09-26'
     ),
     (
         2,
-        'Norm Mitchel'
+        'Norm Mitchel',
+        '2013-05-14'
     );
